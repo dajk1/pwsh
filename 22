@@ -1,1 +1,13 @@
-dddd
+
+Get-AzVM | `
+  Select-Object Name, @{Name="Status";
+        Expression={(Get-AzVM -Name $_.Name -ResourceGroupName $_.ResourceGroupName -status).Statuses[1].displayStatus}}
+
+
+        Get-AzVm -ResourceGroupName dajk_rg | Select-Object Name, PowerState
+
+        Get-AzVM -resourcegroupname "dajk_rg" -name "d*" -Status | select name,PowerState | ft -AutoSize
+
+        Get-AzVM   |select name,PowerState
+
+        ----------------------####################
