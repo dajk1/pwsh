@@ -1,4 +1,4 @@
-
+ h
 Get-AzVM | `
   Select-Object Name, @{Name="Status";
         Expression={(Get-AzVM -Name $_.Name -ResourceGroupName $_.ResourceGroupName -status).Statuses[1].displayStatus}}
@@ -11,3 +11,4 @@ Get-AzVM | `
         Get-AzVM   |select name,PowerState
 
         ----------------------####################
+hh
